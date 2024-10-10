@@ -43,6 +43,10 @@ nav ul li a {
     padding-right: 0;
 }
 
+.logo h2 {
+    padding-left: 10px;
+}
+
 
 .read-more {
     background-color: #E09F3E; 
