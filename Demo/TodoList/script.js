@@ -8,9 +8,7 @@ function renderTasks() {
     tasks.forEach((task, index) => {
         const li = document.createElement('li');
         li.innerHTML = `
-            <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask(${index})">
-                ${task.completed ? '✓' : ''}
-            </div>
+            <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask(${index})">${task.completed ? '✓' : ''}</div>
             <span class="task-text ${task.completed ? 'completed' : ''}">${task.text}</span>
             <button class="edit-btn" onclick="editTask(${index})">✏️</button>
             <button class="delete-btn" onclick="deleteTask(${index})">×</button>
@@ -52,6 +50,7 @@ function saveTasks() {
 }
 
 addTaskBtn.addEventListener('click', addTask);
+
 taskInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') addTask();
 });
