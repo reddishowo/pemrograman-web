@@ -3,344 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tailor - Your Daily Elegance</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        body {
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 5%;
-            background: white;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .contact-btn {
-            background: #E5A853;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 60vh;
-            background: url('/images/image-header.png') center/cover;
-            display: flex;
-            align-items: center;
-            padding: 0 5%;
-        }
-
-        .hero-content {
-            max-width: 600px;
-            color: #333;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Elegance Section */
-        .elegance {
-            padding: 4rem 5%;
-            background: #FFF9E6;
-            text-align: center;
-        }
-
-        .elegance h2 {
-            margin-bottom: 1rem;
-        }
-
-        .process-cards {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .process-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 1rem;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 4rem 5%;
-            text-align: center;
-        }
-
-        .service-icons {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .service-icon {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .service-icon i {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Bestsellers Section */
-        .bestsellers {
-            padding: 4rem 5%;
-        }
-
-        .bestsellers-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-        }
-
-        .product-card {
-            text-align: center;
-        }
-
-        .product-card img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            margin-bottom: 1rem;
-        }
-
-        /* Promotion Section */
-        .promotion {
-            padding: 4rem 5%;
-            position: relative;
-        }
-
-        .promo-card {
-            background: white;
-            padding: 2rem;
-            max-width: 300px;
-            position: absolute;
-            top: 50%;
-            left: 10%;
-            transform: translateY(-50%);
-        }
-
-        .promo-card h2 {
-            font-size: 3rem;
-            margin: 1rem 0;
-        }
-
-        /* Footer */
-        footer {
-            padding: 2rem 5%;
-            text-align: center;
-        }
-
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 1rem 0;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1rem 0;
-        }
-
-        .btn {
-            background: #E5A853;
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-    </style>
+    <title>Tailor</title>
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/06c344409f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
-    <nav>
-        <div class="logo">🧵 Tailor</div>
-        <div class="nav-links">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#product">Product</a>
-            <a href="#pricing">Pricing</a>
-        </div>
-        <a href="#contact" class="contact-btn">Contact Us</a>
-    </nav>
-
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png" alt="Tailor Logo">
+                <h2>Tailor</h2>
+            </div>
+            <div class="navbar-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Product</a></li>
+                <li><a href="#">Pricing</a></li>
+            </ul>
+            <button class="contact-btn">Contact Us</button>
+        </nav>
+    </header>
+    
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
+        <img src="/images/image-header.png" alt="header image">
+        <div class="hero-text">
             <h1>Designing Your Daily Elegance</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <a href="#" class="btn">Read more</a>
+            <button class="read-more">Read more</button>
         </div>
     </section>
 
-    <section class="elegance">
-        <h2>Relaxed Elegance Unveiled</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <div class="process-cards">
-            <div class="process-card">
-                <img src="/images/content1.png" alt="Tailor correlations">
-                <h3>1 - Tailor correlations</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="process-card">
-                <img src="/images/content2.png" alt="Tailor-made sewing">
-                <h3>2 - Tailor-made sewing</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div class="process-card">
-                <img src="/images/content3.png" alt="Clothes from our tailor">
-                <h3>3 - Clothes from our tailor</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-        </div>
-    </section>
-
+    <!-- Services Section -->
     <section class="services">
-        <h2>Why use our services?</h2>
-        <div class="service-icons">
-            <div class="service-icon">
-                <i class="fas fa-pencil-ruler"></i>
-                <h3>Modern style design</h3>
-                <p>Lorem ipsum dolor sit amet</p>
+        <div class="services-animation">
+        <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Relaxed Elegance Unveiled</h1>
+        <p data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla sed neque non accumsan. Donec nec purus ut dolor congue sollicitudin Ut fringilla sed neque non accumsan. </p>
+        <div class="service-grid">
+            <div class="service-item" data-aos="fade-left" data-aos-delay="100" data-aos-duration="1500">
+                <img src="images/content1.png">
+                <h3>1 - Tailor Corrections</h3>
+                <p>Lorem ipsum dolor sit amet, adipiscing elit. Fringilla sed neque accumsan. </p>
             </div>
-            <div class="service-icon">
-                <i class="fas fa-scroll"></i>
+            <div class="service-item"  alt="content2" data-aos="fade-left" data-aos-delay="100" data-aos-duration="2000">
+                <img src="images/content2.png">
+                <h3>2 - Tailor-made Sewing</h3>
+                <p>Lorem ipsum dolor sit amet, adipiscing elit. Fringilla sed neque accumsan. </p>
+            </div>
+            <div class="service-item"  alt="content3" data-aos="fade-left" data-aos-delay="100" data-aos-duration="2500">
+                <img src="images/content3.png">
+                <h3>3 - Clothes from Our Tailor</h3>
+                <p>Lorem ipsum dolor sit amet, adipiscing elit. Fringilla sed neque accumsan. </p>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Why Use Our Services Section -->
+    <section class="why-us" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500">
+        <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">Why Use Our Services?</h1>
+        <div class="features">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="500">
+                <img src="images/image 1.png" alt="image 1">
+                <h3>Modern style design</h3> 
+                <p>Our designs reflect the latest trends, blending modern aesthetics with timeless appeal.</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <img src="images/image 2.png" alt="image 2">
                 <h3>Good quality materials</h3>
-                <p>Lorem ipsum dolor sit amet</p>
+                <p>We use only the highest quality materials to ensure durability and comfort.</p>
             </div>
-            <div class="service-icon">
-                <i class="fas fa-sewing-needle"></i>
-                <h3>Professional machine</h3>
-                <p>Lorem ipsum dolor sit amet</p>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1500">
+                <img src="images/image 3.png" alt="image 3">
+                <h3>Professional machines</h3>
+                <p>All our equipment is state-of-the-art, providing precision in every stitch.</p>
             </div>
-            <div class="service-icon">
-                <i class="fas fa-scissors"></i>
-                <h3>Expert by magazines</h3>
-                <p>Lorem ipsum dolor sit amet</p>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="2000">
+                <img src="images/image 4.png" alt="image 4">
+                <h3>Featured in magazines</h3>
+                <p>Our work has been recognized and featured in prestigious fashion magazines worldwide.</p>
             </div>
-            <div class="service-icon">
-                <i class="fas fa-ruler"></i>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="2500">
+                <img src="images/image 5.png" alt="image 5">
                 <h3>Perfect precision</h3>
-                <p>Lorem ipsum dolor sit amet</p>
+                <p>Our craftsmanship guarantees accuracy down to the last detail.</p>
             </div>
         </div>
-        <a href="#" class="btn">Read more</a>
+        <div class="readmore">
+            <button class="read-more">Read more</button>
+    </div>
     </section>
+    
 
-    <section class="bestsellers">
+    <!-- Bestsellers Section -->
+    <section class="bestsellers" data-aos="fade-right" data-aos-delay="300" data-aos-duration="1500">
         <div class="bestsellers-header">
-            <h2>Bestsellers</h2>
-            <a href="#">Show all ></a>
+            <h1>Bestsellers</h1>
+            <a href="#" class="show-all-btn">Show All ></a>
         </div>
-        <div class="products-grid">
-            <div class="product-card">
-                <img src="/api/placeholder/300/400" alt="Black undershirt">
-                <h3>Black undershirt</h3>
-                <p>$19.99</p>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="images/black-undershirt.png" alt="Black undershirt" data-aos="fade-right" data-aos-delay="100" data-aos-duration="500">
+                <p>Black undershirt</p>
+                <p>$15.11</p>
             </div>
-            <div class="product-card">
-                <img src="/api/placeholder/300/400" alt="Basic long sleeve">
-                <h3>Basic long sleeve</h3>
+            <div class="product-item">
+                <img src="images/basic-long-sleeve.png" alt="Basic long sleeve" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1000">
+                <p>Basic long sleeve</p>
                 <p>$19.21</p>
             </div>
-            <div class="product-card">
-                <img src="/api/placeholder/300/400" alt="Khaki jeans">
-                <h3>Khaki jeans</h3>
+            <div class="product-item">
+                <img src="images/khaki-jeans.png" alt="Khaki jeans" data-aos="fade-right" data-aos-delay="100" data-aos-duration="1500">
+                <div class="product-item-fix">
+                <p>Khaki jeans</p>
                 <p>$19.21</p>
             </div>
-            <div class="product-card">
-                <img src="/api/placeholder/300/400" alt="Pastel t-shirt">
-                <h3>Pastel t-shirt</h3>
-                <p>$42.99</p>
+            </div>
+            <div class="product-item">
+                <img src="images/pastel-tshirt.png" alt="Pastel t-shirt" data-aos="fade-right" data-aos-delay="100" data-aos-duration="2000">
+                <div class="product-item-fix2">
+                <p>Pastel t-shirt</p>
+                <p>$80.99</p>
+            </div>
             </div>
         </div>
     </section>
-
-    <section class="promotion">
-        <img src="/api/placeholder/1200/600" alt="Promotion banner" style="width: 100%; height: 400px; object-fit: cover;">
-        <div class="promo-card">
-            <h3>Upgrade your style</h3>
-            <h2>30%</h2>
-            <p>OFF</p>
-            <a href="#" class="btn">Check Offer Now!</a>
-        </div>
-    </section>
-
+    
+    <!-- Footer Section -->
     <footer>
-        <div class="logo">🧵 Tailor</div>
-        <p>2023 Tailor. All rights reserved.</p>
-        <div class="footer-links">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#pricing">Pricing</a>
-            <a href="#terms">Terms of Conditions</a>
-            <a href="#privacy">Privacy Policy</a>
+        <div class="footer-content" >
+          <div class="logo">
+            <img src="images\logo.png" alt="Tailor Logo" />
+            <h2>Tailor</h2>
+          </div>
+          <p>&copy; 2023 Tailor. All rights reserved.</p>
+          <ul class="footer-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Terms of Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-instagram" style="color: #f0c040;"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-messenger" style="color: #f0c040;"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook" style="color: #f0c040;"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter" style="color: #f0c040;"></i></a>
+          </div>
         </div>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-whatsapp"></i></a>
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-        </div>
-    </footer>
-
+      </footer>
     <script>
-        // Add smooth scrolling to nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        AOS.init();
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('active');
+        }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

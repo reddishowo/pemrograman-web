@@ -1,0 +1,622 @@
+body{
+    font-family: 'Poppins';
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    max-width: 1200px; 
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 0;
+    padding-right: 0;
+}
+
+.logo h2 {
+    padding-left: 10px;
+}
+
+
+.read-more {
+    background-color: #E09F3E; 
+    padding: 15px 25px; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition: background-color 0.3s;
+    font-size: 15px;
+}
+
+.contact-btn {
+    background-color: #E09F3E; 
+    padding: 10px 20px; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition: background-color 0.3s;
+}
+
+.read-more:hover, .contact-btn:hover {
+    background-color: #e0b030; 
+}
+
+.hero {
+    text-align: center;
+    padding: 135px 0;
+    background-color: #f8f5f0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.hero img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero-text h1 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.hero-text p{
+    padding-bottom: 20px;
+}
+
+.services {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f5f0e6;
+}
+
+.services h1{
+    font-size: 2.5em;
+}
+
+.services p {
+    padding-bottom: 40px;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.service-item {
+    width: 30%;
+    padding: 40px 40px 40px;
+}
+
+
+.why-us h1{
+    padding-top: 40px;
+    font-size: 2.5em;
+}
+
+.why-us {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 50px;
+    padding: 0%;
+}
+
+.feature-item {
+    width: 150px; /* Adjust width based on layout needs */
+    text-align: center;
+    margin: 10px;
+}
+
+.feature-item h3 {
+    line-height: 1.5;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: #666;
+    margin-top: 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.readmore{
+    padding-top: 100px;
+}
+
+.bestsellers {
+    text-align: left;
+    padding-left: 50px;
+    font-size: 21px;
+    background-color: #f5f0e6;
+}
+
+.bestsellers-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px; /* Adjust if necessary */
+}
+
+.bestsellers h1 {
+    font-size: 1.5em;
+}
+
+.show-all-btn {
+    text-decoration: none;
+    font-size: 1em;
+    color: #333;
+    background-color: #f5f0e6;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.show-all-btn:hover {
+    background-color: #e0b030;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-right: 50px; /* Optional: keep alignment consistent */
+}
+
+.product-item {
+    flex: 1 1 calc(25% - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    min-height: 300px;
+    padding-bottom: 80px;
+}
+
+.product-item p {
+    margin: 0;
+    flex-grow: 1;
+    color: black;
+    font-size: 20px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item-fix {
+    padding-top: 23px;
+}
+
+.product-item-fix2 {
+    padding-top: 17px;
+}
+
+footer {
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo h2 {
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+    padding: 0;
+    padding-top: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .footer-links a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 35px;
+  }
+  
+  .social-icons a {
+    margin: 10px;
+  }
+  
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.hero, .services, .why-us, .bestsellers {
+    width: 100%;
+    box-sizing: border-box; /* Agar padding tidak menambah ukuran */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#contactForm textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#contactForm button {
+    background-color: #E09F3E;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contactForm button:hover {
+    background-color: #e0b030;
+}
+
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #E09F3E;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: none;
+    font-size: 20px;
+    transition: background-color 0.3s;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    background-color: #e0b030;
+}
+
+/* Feature items animation */
+.feature-item {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Product hover effect */
+.product-item {
+    transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Mobile Navigation */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding: 100px 0;
+    }
+
+    .hero img {
+        width: 90%;
+        object-fit: contain;
+    }
+
+    .service-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 80%;
+        margin: 20px 0;
+    }
+
+    .features {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .feature-item {
+        width: calc(33.33% - 40px);
+        min-width: 200px;
+    }
+
+    .product-grid {
+        justify-content: center;
+        gap: 30px;
+    }
+
+    .product-item {
+        flex: 1 1 calc(50% - 40px);
+        min-width: 250px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 80px 0;
+    }
+
+    .hero img {
+        width: 95%;
+    }
+
+    .hero-text {
+        padding: 0 20px;
+    }
+
+    /* Header/Navigation */
+    .navbar-toggle {
+        display: block;
+    }
+
+    nav {
+        padding: 15px;
+    }
+
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    .contact-btn {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero-text h1 {
+        font-size: 2em;
+    }
+
+    /* Services Section */
+    .services {
+        padding: 40px 20px;
+    }
+
+    .services h1 {
+        font-size: 2em;
+    }
+
+    /* Features Section */
+    .feature-item {
+        width: calc(50% - 40px);
+    }
+
+    /* Bestsellers Section */
+    .bestsellers {
+        padding: 40px 20px;
+    }
+
+    .product-item {
+        flex: 1 1 calc(100% - 40px);
+    }
+
+    /* Footer */
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-links li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero img {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .hero-text p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+
+    /* Header */
+    .logo h2 {
+        font-size: 1.5em;
+    }
+
+    /* Hero Section */
+    .hero-text h1 {
+        font-size: 1.5em;
+    }
+
+    /* Services & Features */
+    .feature-item {
+        width: calc(100% - 40px);
+    }
+
+    /* Contact Modal */
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+/* Fix for iOS Safari 100vh issue */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        min-height: -webkit-fill-available;
+    }
+}
