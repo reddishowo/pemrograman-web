@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Tailor</title>
+    <link rel="icon" href="/assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/06c344409f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <!-- Header (Same as homepage) -->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/logo.png" alt="Tailor Logo">
+                <h2>Tailor</h2>
+            </div>
+            <div class="navbar-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="product.html">Product</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+            </ul>
+            <button class="contact-btn">Contact Us</button>
+        </nav>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="hero" style="background-color: #f8f5f0;">
+        <div class="hero-text" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <h1>Our Story</h1>
+            <p>Creating timeless elegance through expert craftsmanship since 1995</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="services" style="background-color: white;">
+        <div data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            <h2>Who We Are</h2>
+            <p>Founded in 1995, Tailor has been dedicated to providing exceptional tailoring services and custom clothing solutions. Our team of experienced craftsmen combines traditional techniques with modern innovation to create perfectly fitted garments.</p>
+        </div>
+        
+        <div class="service-grid" style="margin-top: 50px;">
+            <div class="service-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <h3>Our Mission</h3>
+                <p>To provide exceptional tailoring services that enhance our clients' confidence through perfectly fitted garments.</p>
+            </div>
+            <div class="service-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <h3>Our Vision</h3>
+                <p>To be the leading provider of bespoke tailoring services, known for quality, innovation, and customer satisfaction.</p>
+            </div>
+            <div class="service-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <h3>Our Values</h3>
+                <p>Quality, Integrity, Innovation, and Customer Focus guide everything we do.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="why-us">
+        <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">Meet Our Team</h1>
+        <div class="features">
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+                <img src="/assets/team1.jpg" alt="Team Member 1">
+                <h3>John Doe</h3>
+                <p>Master Tailor</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <img src="/assets/team2.jpg" alt="Team Member 2">
+                <h3>Jane Smith</h3>
+                <p>Design Lead</p>
+            </div>
+            <div class="feature-item" data-aos="fade-up" data-aos-delay="300" data-aos-duration="1000">
+                <img src="/assets/team3.jpg" alt="Team Member 3">
+                <h3>Mike Johnson</h3>
+                <p>Pattern Maker</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as homepage) -->
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="/assets/logo.png" alt="Tailor Logo" />
+                <h2>Tailor</h2>
+            </div>
+            <p>&copy; 2023 Tailor. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Terms of Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-instagram" style="color: #f0c040;"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook-messenger" style="color: #f0c040;"></i></a>
+                <a href="#"><i class="fa-brands fa-facebook" style="color: #f0c040;"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter" style="color: #f0c040;"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        AOS.init({
+            once: false, 
+            mirror: true  
+        });
+        window.addEventListener('scroll', () => {
+            AOS.refreshHard();
+        });
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('active');
+        }
+    </script>
+    <script src="/js/script.js"></script>
+</body>
+</html>
