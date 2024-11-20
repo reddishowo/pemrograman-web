@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product - Tailor</title>
+    <link rel="icon" href="/assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/cart.css">
+    <link rel="stylesheet" href="/css/productstyle.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/06c344409f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="/assets/logo.png" alt="Tailor Logo">
+                <h2>Tailor</h2>
+            </div>
+            <div class="navbar-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="product.html" class="active">Product</a></li>
+            </ul>
+            <button class="contact-btn">Contact Us</button>
+            <div class="cart-button-wrapper">
+            <div class="cart-badge" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart cart-icon"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Product Section -->
+        <section class="product-section">
+            <div class="container">
+                <div class="header">
+                    <h1 data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">Our Product</h1>
+                    <a href="#" class="show-all">Show all</a>
+                </div>
+                <div id="loading" class="loading" style="display: none;">Loading products...</div>
+                <div id="error" class="error" style="display: none;"></div>
+                <div class="product-grid" id="productGrid">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">
+                <img src="/assets/logo.png" alt="Tailor Logo" />
+                <h2>Tailor</h2>
+            </div>
+            <p>&copy; 2023 Tailor. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Terms of Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            once: true, 
+            mirror: false
+        });
+
+        function toggleMenu() {
+            const navUl = document.querySelector('nav ul');
+            navUl.classList.toggle('active');
+        }
+    </script>
+    <script src="/js/cart.js"></script>
+    <script src="/js/fetch_data.js"></script>
+    <script src="/js/script.js"></script>
+    <div class="cart-container" id="cart">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="close-cart" onclick="toggleCart()">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

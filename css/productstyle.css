@@ -1,0 +1,182 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 2vw, 2rem);
+    padding: clamp(1rem, 2vw, 2rem);
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 95%;
+}
+
+.product-item .button-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.product-item {
+    background: var(--background-color, #fff); 
+    border-radius: 12px; 
+    padding: clamp(1rem, 1.5vw, 1.5rem);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color, #ddd); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    will-change: transform, box-shadow;
+    position: relative;
+}
+
+.product-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
+    border: 1px solid var(--primary-color, #333); 
+}
+
+.product-item img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+}
+
+.product-item h3 {
+    margin: 0.8rem 0 0.5rem;
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    font-weight: 500;
+}
+
+.product-item p {
+    margin: 0 0 0.8rem;
+    font-size: clamp(0.85rem, 1vw, 0.9rem);
+    color: var(--secondary-color);
+    flex-grow: 1;
+}
+
+.product-item .price {
+    font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.view-details, .add-to-cart {
+    flex: 1;
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 0.5rem 1rem; /* Dikurangi padding */
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem; /* Dikurangi ukuran font */
+    margin-top: 0.3rem; /* Dikurangi margin atas */
+}
+
+.view-details {
+    background-color: transparent;
+    border: 2px solid #333;
+    color: #333;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.product-section h1 {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 0 2rem;
+}
+
+.product-section .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.show-all {
+    color: #666;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.show-all:hover {
+    color: #333;
+}
+
+.show-all::after {
+    content: "→";
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.show-all:hover::after {
+    transform: translateX(5px);
+}
+
+.loading, .error {
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.1rem;
+    color: #666;
+    background: #f8f8f8;
+    border-radius: 8px;
+    margin: 2rem;
+}
+
+.error {
+    color: #ff4444;
+    background: #fff0f0;
+}
+
+.add-to-cart {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 0.2rem 0.8rem; 
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.3rem;
+}
+
+.view-details:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.add-to-cart:hover {
+    background-color: #45a049;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .product-item {
+        padding: 1rem;
+    }
+
+    .product-item img {
+        height: 220px;
+    }
+}

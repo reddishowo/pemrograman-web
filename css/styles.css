@@ -1,5 +1,19 @@
+main {
+    flex: 1 0 auto; 
+}
+
 body{
     font-family: 'Poppins';
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 header {
@@ -160,6 +174,11 @@ nav ul li a {
     text-align: left;
 }
 
+.feature-item-about img {
+    height: 200px;
+    width: auto;
+}
+
 .readmore{
     padding-top: 100px;
 }
@@ -240,69 +259,70 @@ footer {
     background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
-  }
-  
-  .footer-content {
+    width: 100%;
+}
+
+.footer-content {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  .logo {
+}
+
+.logo {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
-  }
-  
-  .logo img {
+}
+
+.logo img {
     width: 40px;
     height: 40px;
     margin-right: 10px;
-  }
-  
-  .logo h2 {
+}
+
+.logo h2 {
     font-size: 30px;
     margin: 0;
-  }
-  
-  p {
+}
+
+p {
     font-size: 14px;
     color: #777;
     margin-bottom: 10px;
-  }
-  
-  .footer-links {
+}
+
+.footer-links {
     list-style-type: none;
     padding: 0;
     padding-top: 10px;
     margin-bottom: 20px;
-  }
-  
-  .footer-links li {
+}
+
+.footer-links li {
     display: inline;
     margin: 0 15px;
-  }
-  
-  .footer-links a {
+}
+
+.footer-links a {
     color: #333;
     text-decoration: none;
     font-size: 14px;
-  }
-  
-  .footer-links a:hover {
+}
+
+.footer-links a:hover {
     text-decoration: underline;
-  }
-  
-  .social-icons {
+}
+
+.social-icons {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     font-size: 35px;
-  }
-  
-  .social-icons a {
+}
+
+.social-icons a {
     margin: 10px;
-  }
+}
   
 
 body, html {
