@@ -69,7 +69,3 @@ document.addEventListener('DOMContentLoaded', function () {
 
     fetchProducts();
 });
-
-function viewProductDetails(productId) {
-    console.log('Viewing product:', productId);
-}

@@ -23,12 +23,13 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid var(--border-color, #ddd);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    will-change: transform, box-shadow;
     position: relative;
 }
 
 .product-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 20px rgb(236, 195, 31);
     border: 1px solid var(--primary-color, #333);
 }
 
@@ -66,7 +67,6 @@
     border: 2px solid #333;
     color: #333;
     padding: 0.5rem 1rem;
-    /* Dikurangi padding */
     border-radius: 6px;
     font-weight: 500;
     cursor: pointer;
@@ -74,9 +74,7 @@
     text-align: center;
     text-decoration: none;
     font-size: 0.8rem;
-    /* Dikurangi ukuran font */
     margin-top: 0.3rem;
-    /* Dikurangi margin atas */
 }
 
 .view-details {
