@@ -6,7 +6,7 @@
     height: 100vh;
     background: #fff;
     box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-    transition: right 0.3s ease;
+    transition: right 0.8s ease;
     z-index: 1000;
     display: flex;
     flex-direction: column;
