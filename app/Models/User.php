@@ -1,24 +1,17 @@
 <?php
-
 namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 
-class User extends Model
+class User extends Authenticatable // Change from Model to Authenticatable
 {
-    use HasFactory;
+    use HasFactory, Notifiable;
 
-    /**
-     * Attributes that are mass assignable.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = ['name', 'email', 'password'];
+    protected $hidden = ['password'];
 
-    /**
-     * Relationship: A user can have many orders.
-     */
     public function orders()
     {
         return $this->hasMany(Order::class);
